@@ -1,5 +1,5 @@
 /*
-Covid 19 Exploration de datos
+Covid 19 Exploracion de datos
 Covid 19 Data Exploration 
 
 Skills used: Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types
@@ -103,7 +103,7 @@ Join PortfolioProject..CovidVaccinations vac
 where dea.continent is not null 
 order by 2,3
 
--- Uso de CTE (common table expressions) para realizar el c·lculo en la clausula Partition by de la consulta anterior
+-- Uso de CTE (common table expressions) para realizar el c√°lculo en la clausula Partition by de la consulta anterior
 -- Using CTE to perform Calculation on Partition By in previous query
 
 With PopvsVac (Continent, Location, Date, Population, New_Vaccinations, Rolling_People_Vaccinated)
@@ -123,7 +123,7 @@ Select *, (Rolling_People_Vaccinated/population)*100
 From PopvsVac
 where PopvsVac.population <> '0'	
 
--- Usamos una tabla temporal para realizar el c·lculo en la clausula Partition by de la consulta anterior
+-- Usamos una tabla temporal para realizar el c√°lculo en la clausula Partition by de la consulta anterior
 -- Using Temp Table to perform Calculation on Partition By in previous query
 
 DROP Table if exists #Percent_Population_Vaccinated
